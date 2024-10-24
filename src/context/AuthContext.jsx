@@ -23,11 +23,15 @@ export const AuthContextProvider = ({ children }) => {
       setCurrentUser(res.data);
       localStorage.setItem("user", JSON.stringify(res.data));
       console.log("Login successful:", res.data);
+      return res.data;
     } catch (error) {
       console.error(
         "Login error:",
         error.response ? error.response.data : error.message
       );
+      throw new Error(
+        error.response ? error.response.data.message : error.message
+      ); // Throw error
     }
   };
 

@@ -10,6 +10,7 @@ const Login = () => {
     password: "",
   });
   const [isLoading, setIsLoading] = useState(false); // Add loading state
+  const [errMsg, setErrMsg] = useState(""); // Add error message state
 
   const handleChange = (e) => {
     setUser((prev) => ({
@@ -25,7 +26,9 @@ const Login = () => {
     try {
       await login(user);
       router.push("/"); // Use `router.push` instead of `navigate`
+      setErrMsg(""); // Clear error message on success
     } catch (error) {
+      setErrMsg("Login failed. Please check your email and password."); // Set error message
       console.log(error);
     } finally {
       setIsLoading(false); // End loading
@@ -107,6 +110,9 @@ const Login = () => {
                 {isLoading ? "Logging in..." : "Log in"}
               </button>
             </div>
+            {errMsg && (
+              <div className="text-red-600 mt-4 text-center">{errMsg}</div>
+            )}{" "}
           </form>
         </div>
       </div>
