@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import apple from "../assets/apple.jpeg";
+// import apple from "../assets/apple.jpeg";
 import { motion } from "framer-motion";
 import "../styles/Name.module.css";
 import profile from "../assets/Profile.jpeg";
@@ -47,7 +47,8 @@ const Home = () => {
         </div>
         <br />
         <div className=" flex items-center justify-center">
-          <Image src={profile} className="w-1/3"></Image>
+          <Image src={profile} className="w-1/3" alt="Profile Picture" />{" "}
+          {/* Ensure alt text is meaningful */}
         </div>
         <br />
       </div>

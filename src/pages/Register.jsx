@@ -21,7 +21,7 @@ const Register = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
+      // const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
       const res = await axios.post(`/api/auth/register`, user);
       console.log(res.data);
       router.push("/"); // Use `router.push` instead of `navigate`

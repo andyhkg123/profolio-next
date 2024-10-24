@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import axios from "axios";
+import Image from "next/image"; // Add this import
 
 const Project = () => {
   const [project, setProject] = useState("");
@@ -11,7 +12,7 @@ const Project = () => {
 
   useEffect(() => {
     async function fetchData() {
-      const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL; // Assuming you have an environment variable
+      //   const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL; // Assuming you have an environment variable
       try {
         const res = await axios.get(`/api/projects/${id}`);
         setProject(res.data);
@@ -40,37 +41,49 @@ const Project = () => {
       <div className="flex flex-wrap justify-center items-center">
         {project.display_one && (
           <div className="flex justify-center items-center h-screen">
-            <img
+            <Image // Change <img> to <Image>
               className="text-center"
               src={project.display_one}
               alt="Project Display"
+              layout="responsive" // Optional: Adjust layout as needed
+              width={720} // Set width
+              height={680} // Set height
             />
           </div>
         )}
         {project.display_two && (
           <div className="flex justify-center items-center h-screen">
-            <img
+            <Image // Change <img> to <Image>
               className="text-center"
               src={project.display_two}
               alt="Project Display"
+              layout="responsive" // Optional: Adjust layout as needed
+              width={720} // Set width
+              height={680} // Set height
             />
           </div>
         )}
         {project.display_three && (
           <div className="flex justify-center items-center h-screen">
-            <img
+            <Image // Change <img> to <Image>
               className="text-center"
               src={project.display_three}
               alt="Project Display"
+              layout="responsive" // Optional: Adjust layout as needed
+              width={720} // Set width
+              height={680} // Set height
             />
           </div>
         )}
         {project.display_four && (
           <div className="flex justify-center items-center h-screen">
-            <img
+            <Image // Change <img> to <Image>
               className="text-center"
               src={project.display_four}
               alt="Project Display"
+              layout="responsive" // Optional: Adjust layout as needed
+              width={720} // Set width
+              height={680} // Set height
             />
           </div>
         )}
