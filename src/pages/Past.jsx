@@ -17,7 +17,7 @@ const Past = () => {
 
           <br />
           <div>
-            <span className="typewriter bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+            <span className="text-2xl typewriter bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
               Education
             </span>
           </div>
@@ -26,7 +26,60 @@ const Past = () => {
         <div className="education-container">
           <div className="mb-6">
             <h3 className="text-xl font-semibold">
-              Generation Bootcamp Junior Full Stack Development Program
+              IBM, IBM IT Scrum Master Certificate
+            </h3>
+            <ul className="list-disc list-inside ml-4">
+              <li>
+                Completed training in Agile methodologies, Scrum practices,
+                DevOps, and software engineering, culminating in a capstone
+                project and preparation for Certified Scrum Master (CSM)
+                certification.
+              </li>
+            </ul>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.coursera.org/account/accomplishments/specialization/NZWG574XG3H8"
+            >
+              <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                <svg class="fill-current w-4 h-4 mr-2" viewBox="0 0 20 20">
+                  <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                </svg>
+                <span>Online Certificate</span>
+              </button>
+            </a>
+
+            <p className="text-gray-600">Sep 2024</p>
+          </div>
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold">
+              Google, Google Project Management Certificate
+            </h3>
+            <ul className="list-disc list-inside ml-4">
+              <li>
+                Completed training in project management fundamentals, including
+                project initiation, execution, planning, and Agile
+                methodologies.
+              </li>
+            </ul>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.coursera.org/account/accomplishments/specialization/9RU3XT4KE0QB"
+            >
+              <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                <svg class="fill-current w-4 h-4 mr-2" viewBox="0 0 20 20">
+                  <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                </svg>
+                <span>Online Certificate</span>
+              </button>
+            </a>
+
+            <p className="text-gray-600">Sep 2024</p>
+          </div>
+          <div className="mb-6">
+            <h3 className="text-xl font-semibold">
+              Generation Bootcamp Junior Full Stack Developer
             </h3>
             <ul className="list-disc list-inside ml-4">
               <li>
@@ -62,7 +115,8 @@ const Past = () => {
 
           <div className="mb-6">
             <h3 className="text-xl font-semibold">
-              Self-taught MOOC-FI JAVA PROGRAMMING I, JAVA PROGRAMMING II
+              University Of Helsinki, Finland , JAVA PROGRAMMING I, JAVA
+              PROGRAMMING II Courses
             </h3>
             <ul className="list-disc list-inside ml-4">
               <li>
@@ -84,25 +138,30 @@ const Past = () => {
                 sorting algorithms, linked lists, stacks, and queues.
               </li>
             </ul>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://certificates.mooc.fi/validate/zsj1lh75zp"
+            >
+              <button className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                <svg class="fill-current w-4 h-4 mr-2" viewBox="0 0 20 20">
+                  <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
+                </svg>
+                <span>Online Certificate</span>
+              </button>
+            </a>
+
             <p className="text-gray-600">2023-2024</p>
           </div>
 
           <div className="mb-6">
             <h3 className="text-xl font-semibold">
-              Bachelor of Construction Project Management (1st Class Honors)
+              University of Huddersfield, UK , Bachelor of Construction Project
+              Management (1st Class Honors)
             </h3>
             <p>University of Huddersfield, studied in UK</p>
             <p className="text-gray-600">Aug 2021</p>
             <p className="text-gray-600">(CIOB/RICS Recognized)</p>
-          </div>
-
-          <div className="mb-6">
-            <h3 className="text-xl font-semibold">
-              Associate Degree in Construction Engineering and Management
-            </h3>
-            <p>City University of Hong Kong</p>
-            <p className="text-gray-600">Aug 2018</p>
-            <p className="text-gray-600">(HKIE Recognized)</p>
           </div>
         </div>
       </div>

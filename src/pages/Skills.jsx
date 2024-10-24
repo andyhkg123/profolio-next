@@ -15,7 +15,7 @@ const Skills = () => {
   return (
     <div>
       <div className="text-center item-center justify-center ">
-        <span className="typewriter bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+        <span className="text-2xl typewriter bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
           Skills
         </span>
       </div>

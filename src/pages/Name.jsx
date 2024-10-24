@@ -28,8 +28,8 @@ const Home = () => {
 
           <br />
           <div>
-            <span className="typewriter bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
-              Full Stack Developer
+            <span className=" text-2xl typewriter bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
+              {/* Full Stack Developer */}
             </span>
           </div>
           <br />
