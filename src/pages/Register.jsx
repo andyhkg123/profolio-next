@@ -10,6 +10,7 @@ const Register = () => {
     password: "",
   });
   const [errMsg, setErrMsg] = useState("");
+  const [isLoading, setIsLoading] = useState(false); // Add loading state
 
   const handleChange = (e) => {
     setUser((prev) => ({
@@ -20,8 +21,8 @@ const Register = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsLoading(true); // Start loading
     try {
-      // const apiUrl = process.env.NEXT_PUBLIC_BACKEND_URL;
       const res = await axios.post(`/api/auth/register`, user);
       console.log(res.data);
       router.push("/"); // Use `router.push` instead of `navigate`
@@ -29,6 +30,8 @@ const Register = () => {
     } catch (error) {
       setErrMsg(error.response.data.error);
       console.log(errMsg);
+    } finally {
+      setIsLoading(false); // End loading
     }
   };
 
@@ -41,6 +44,11 @@ const Register = () => {
           </h2>
         </div>
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          {isLoading && (
+            <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-75">
+              <div className="text-center">Loading...</div>
+            </div>
+          )}
           <form action="#" method="POST" className="space-y-6">
             <div>
               <label
@@ -117,8 +125,9 @@ const Register = () => {
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 onClick={handleSubmit}
+                disabled={isLoading} // Disable button while loading
               >
-                Register
+                {isLoading ? "Registering..." : "Register"}
               </button>
             </div>
             <div className="text-red-600">{errMsg}</div>

@@ -1,5 +1,4 @@
 import React, { useState, useContext } from "react";
-
 import { useRouter } from "next/router";
 import { AuthContext } from "../context/AuthContext.jsx"; // Adjust the path as needed
 
@@ -10,6 +9,7 @@ const Login = () => {
     email: "",
     password: "",
   });
+  const [isLoading, setIsLoading] = useState(false); // Add loading state
 
   const handleChange = (e) => {
     setUser((prev) => ({
@@ -21,11 +21,14 @@ const Login = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
+    setIsLoading(true); // Start loading
     try {
-      const res = await login(user);
+      await login(user);
       router.push("/"); // Use `router.push` instead of `navigate`
     } catch (error) {
       console.log(error);
+    } finally {
+      setIsLoading(false); // End loading
     }
   };
 
@@ -38,6 +41,11 @@ const Login = () => {
           </h2>
         </div>
         <div className="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+          {isLoading && (
+            <div className="fixed inset-0 flex items-center justify-center bg-white bg-opacity-75">
+              <div className="text-center">Loading...</div>
+            </div>
+          )}
           <form action="#" method="POST" className="space-y-6">
             <div>
               <label
@@ -54,7 +62,7 @@ const Login = () => {
                   required
                   autoComplete="email"
                   className="block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
-                  value={user.email} // Corrected to user.email
+                  value={user.email}
                   onChange={handleChange}
                 />
               </div>
@@ -94,8 +102,9 @@ const Login = () => {
                 type="submit"
                 className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                 onClick={handleSubmit}
+                disabled={isLoading} // Disable button while loading
               >
-                Log in
+                {isLoading ? "Logging in..." : "Log in"}
               </button>
             </div>
           </form>
