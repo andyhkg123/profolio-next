@@ -1,7 +1,6 @@
 "use client";
 
-// import { useState, useContext } from "react";
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import {
   Dialog,
@@ -34,7 +33,7 @@ import {
   PlayCircleIcon,
 } from "@heroicons/react/20/solid";
 import Link from "next/link";
-// import { AuthContext } from "../context/AuthContext";
+import { AuthContext } from "../context/AuthContext";
 
 const products = [
   {
@@ -87,6 +86,7 @@ const callsToAction = [
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { currentUser, logout } = useContext(AuthContext);
 
   return (
     <header className="bg-white">
@@ -173,7 +173,7 @@ export default function Header() {
             Home
           </Link>
           <Link
-            href="/"
+            href="/Blog"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Blog
@@ -186,14 +186,26 @@ export default function Header() {
           </Link>
         </PopoverGroup>
 
-        <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          <Link
-            href="/Login"
-            className="text-sm font-semibold leading-6 text-gray-900"
-          >
-            Log in <span aria-hidden="true">&rarr;</span>
-          </Link>
-        </div>
+        {currentUser ? (
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <Link
+              href=""
+              onClick={logout}
+              className=" text-sm font-semibold leading-6 text-gray-900"
+            >
+              Log Out <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
+        ) : (
+          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+            <Link
+              href="/Login"
+              className="text-sm font-semibold leading-6 text-gray-900"
+            >
+              Log in <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
+        )}
 
         {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <Link
@@ -204,14 +216,18 @@ export default function Header() {
           </Link>
         </div> */}
 
-        <div className="hidden lg:flex  lg:justify-end">
-          <Link
-            href="/Register"
-            className="ml-6 text-sm font-semibold leading-6 text-gray-900"
-          >
-            Register <span aria-hidden="true">&rarr;</span>
-          </Link>
-        </div>
+        {currentUser ? (
+          <div></div>
+        ) : (
+          <div className="hidden lg:flex  lg:justify-end">
+            <Link
+              href="/Register"
+              className="ml-6 text-sm font-semibold leading-6 text-gray-900"
+            >
+              Register <span aria-hidden="true">&rarr;</span>
+            </Link>
+          </div>
+        )}
       </nav>
       <Dialog
         open={mobileMenuOpen}
@@ -267,7 +283,7 @@ export default function Header() {
                   Home
                 </Link>
                 <Link
-                  href="/"
+                  href="/Blog"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Blog
@@ -281,31 +297,32 @@ export default function Header() {
               </div>
 
               <div className="py-6">
-                {/* {currentUser ? (
-                  <div></div>
-                ) : ( */}
-                <Link
-                  href="/Login"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Log in
-                </Link>
-                {/* )} */}
-                {/* {currentUser ? (
+                {currentUser ? (
                   <Link
+                    href="/"
                     onClick={logout}
                     className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                   >
                     Log Out
                   </Link>
-                ) : ( */}
-                <Link
-                  href="/Register"
-                  className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                >
-                  Register
-                </Link>
-                {/* )} */}
+                ) : (
+                  <Link
+                    href="/Login"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Log in
+                  </Link>
+                )}
+                {currentUser ? (
+                  <div></div>
+                ) : (
+                  <Link
+                    href="/Register"
+                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                  >
+                    Register
+                  </Link>
+                )}
               </div>
             </div>
           </div>
