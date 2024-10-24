@@ -1,8 +1,12 @@
 import React, { useState } from "react";
 import axios from "axios";
 import { useRouter } from "next/router";
+import { useContext } from "react";
+import { AuthContext } from "../context/AuthContext.jsx"; // Adjust the path as needed
 
 const Register = () => {
+  const { login } = useContext(AuthContext);
+
   const router = useRouter();
   const [user, setUser] = useState({
     fullname: "",
@@ -25,6 +29,7 @@ const Register = () => {
     try {
       const res = await axios.post(`/api/auth/register`, user);
       console.log(res.data);
+      await login(user);
       router.push("/"); // Use `router.push` instead of `navigate`
       setErrMsg("");
     } catch (error) {
