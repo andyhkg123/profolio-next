@@ -9,7 +9,12 @@ const Footer = () => {
             © 2024 <a class="hover:underline">Andy Wong Tsz Kiu™</a>. All Rights
             Reserved.
           </span>
-          <div className="text-center"> andy.wongtszkiu@gmail.com</div>
+
+          <a href="mailto:andy.wongtszkiu@gmail.com">
+            <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full text-center">
+              Email: andy.wongtszkiu@gmail.com
+            </button>
+          </a>
 
           <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
             <li>

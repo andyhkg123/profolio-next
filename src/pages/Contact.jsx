@@ -43,7 +43,6 @@ const Contact = () => {
       </div>
       <div className="text-center">Linkedin</div>
       <br></br>
-      <div className="text-center">Email: andy.wongtszkiu@gmail.com</div>
     </div>
   );
 };
