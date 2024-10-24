@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useContext } from "react";
 import {
   Dialog,
@@ -76,10 +78,10 @@ const products = [
     icon: TruckIcon,
   },
 ];
-// const callsToAction = [
-//   { name: "Watch demo", href: "#", icon: PlayCircleIcon },
-//   { name: "Contact sales", href: "#", icon: PhoneIcon },
-// ];
+const callsToAction = [
+  { name: "Watch demo", href: "#", icon: PlayCircleIcon },
+  { name: "Contact sales", href: "#", icon: PhoneIcon },
+];
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -91,7 +93,7 @@ export default function Header() {
         className="mx-auto flex max-w-7xl items-center justify-between p-6 lg:px-8"
       >
         <div className="flex lg:flex-1">
-          <Link href="/Skills" className="-m-1.5 p-1.5">
+          <Link href="/" className="-m-1.5 p-1.5">
             Andy Wong
           </Link>
         </div>
@@ -132,14 +134,13 @@ export default function Header() {
                       />
                     </div>
                     <div className="flex-auto">
-                      {/* <Link
-                        to={`/projectspage/${item.id}`}
-                        href={item.href}
+                      <Link
+                        href={`/projectspage/${item.id}`}
                         className="block font-semibold text-gray-900"
                       >
                         {item.name}
                         <span className="absolute inset-0" />
-                      </Link> */}
+                      </Link>
                       <p className="mt-1 text-gray-600">{item.description}</p>
                     </div>
                   </div>
@@ -163,54 +164,52 @@ export default function Header() {
             </PopoverPanel>
           </Popover>
 
-          {/* <Link
-            to="/"
+          <Link
+            href="/"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Home
           </Link>
           <Link
-            to="/blog"
+            href="/"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Blog
           </Link>
           <Link
-            to="/contact"
+            href="/Contact"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Contact
-          </Link> */}
+          </Link>
         </PopoverGroup>
 
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-          {/* <Link
-            to="/login"
+          <Link
+            href="/Login"
             className="text-sm font-semibold leading-6 text-gray-900"
           >
             Log in <span aria-hidden="true">&rarr;</span>
-          </Link> */}
+          </Link>
         </div>
 
-        {/* {currentUser ? (
-          <div className="hidden lg:flex lg:flex-1 lg:justify-end">
-            <Link
-              onClick={logout}
-              className=" text-sm font-semibold leading-6 text-gray-900"
-            >
-              Log Out <span aria-hidden="true">&rarr;</span>
-            </Link>
-          </div>
-        ) : ( */}
+        {/* <div className="hidden lg:flex lg:flex-1 lg:justify-end">
+          <Link
+            onClick={logout}
+            className=" text-sm font-semibold leading-6 text-gray-900"
+          >
+            Log Out <span aria-hidden="true">&rarr;</span>
+          </Link>
+        </div> */}
+
         <div className="hidden lg:flex  lg:justify-end">
-          {/* <Link
-            to="/register"
+          <Link
+            href="/Register"
             className="ml-6 text-sm font-semibold leading-6 text-gray-900"
           >
             Register <span aria-hidden="true">&rarr;</span>
-          </Link> */}
+          </Link>
         </div>
-        {/* )} */}
       </nav>
       <Dialog
         open={mobileMenuOpen}
@@ -220,9 +219,9 @@ export default function Header() {
         <div className="fixed inset-0 z-10" />
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
-            {/* <Link to="/" className="-m-1.5 p-1.5">
+            <Link href="/" className="-m-1.5 p-1.5">
               <div>Andy Wong</div>
-            </Link> */}
+            </Link>
             <button
               type="button"
               onClick={() => setMobileMenuOpen(false)}
@@ -251,41 +250,44 @@ export default function Header() {
                         as="a"
                         className="block rounded-lg py-2 pl-6 pr-3 text-sm font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                       >
-                        {/* <Link to={`/projectspage/${item.id}`}>{item.name}</Link> */}
+                        {/* item id link */}
+                        <Link href={`/projectspage/${item.id}`}>
+                          {item.name}
+                        </Link>
                       </DisclosureButton>
                     ))}
                   </DisclosurePanel>
                 </Disclosure>
-                {/* <Link
-                  to="/"
+                <Link
+                  href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Home
                 </Link>
                 <Link
-                  to="/blog"
+                  href="/"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Blog
                 </Link>
                 <Link
-                  to="contact"
+                  href="/Contact"
                   className="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Contact
-                </Link> */}
+                </Link>
               </div>
 
               <div className="py-6">
                 {/* {currentUser ? (
                   <div></div>
                 ) : ( */}
-                {/* <Link
-                  to="/login"
+                <Link
+                  href="/Login"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Log in
-                </Link> */}
+                </Link>
                 {/* )} */}
                 {/* {currentUser ? (
                   <Link
@@ -295,12 +297,12 @@ export default function Header() {
                     Log Out
                   </Link>
                 ) : ( */}
-                {/* <Link
-                  to="/register"
+                <Link
+                  href="/Register"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                 >
                   Register
-                </Link> */}
+                </Link>
                 {/* )} */}
               </div>
             </div>
