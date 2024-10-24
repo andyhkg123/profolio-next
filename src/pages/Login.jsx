@@ -1,13 +1,11 @@
-// import React, { useState, useContext } from "react";
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
-// import axios from "axios";
 import { useRouter } from "next/router";
-// import { AuthContext } from "../context/AuthContext"; // Adjust the path as needed
+import { AuthContext } from "../context/AuthContext.jsx"; // Adjust the path as needed
 
 const Login = () => {
   const router = useRouter();
-  // const { login } = useContext(AuthContext);
+  const { login } = useContext(AuthContext);
   const [user, setUser] = useState({
     email: "",
     password: "",
@@ -24,7 +22,7 @@ const Login = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
     try {
-      // const res = await login(user);
+      const res = await login(user);
       router.push("/"); // Use `router.push` instead of `navigate`
     } catch (error) {
       console.log(error);
