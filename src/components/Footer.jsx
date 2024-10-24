@@ -19,7 +19,7 @@ const Footer = () => {
           <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-gray-500 dark:text-gray-400 sm:mt-0">
             <li>
               <div href="#" class="hover:underline me-4 md:me-6">
-                This profolio is created by NextJS & MongoDB
+                This profolio is created by NextJS , MongoDB with JWT Token
               </div>
             </li>
           </ul>
