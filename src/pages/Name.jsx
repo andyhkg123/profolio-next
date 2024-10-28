@@ -35,7 +35,7 @@ const Home = () => {
             </span>
           </div>
           <br />
-          <div>
+          <div className="dark:text-black">
             Detail-oriented and analytical engineering professional with a
             strong foundation in construction project management and site
             supervision. Driven by a longstanding passion for coding since
