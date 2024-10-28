@@ -17,7 +17,6 @@ const Home = () => {
             grid
             place-content-center
             gap-2
-            bg-green-300
             px-8
             py-24
             text-black
