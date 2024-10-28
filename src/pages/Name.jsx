@@ -13,6 +13,7 @@ const Home = () => {
       <div className="flex flex-col items-center">
         <div className="flex-col mb-4 lg:mb-0 lg:mr-10 text-center">
           <div
+            className="
             grid
             place-content-center
             gap-2
@@ -21,6 +22,7 @@ const Home = () => {
             py-24
             text-black
             dark:text-gray-400
+            "
           >
             <FlipLink href="#">Andy</FlipLink>
             <br />
