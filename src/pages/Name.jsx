@@ -20,7 +20,7 @@ const Home = () => {
             px-8
             py-24
             text-black
-            dark:text-black
+            
             "
           >
             <FlipLink href="#">Andy</FlipLink>
@@ -35,7 +35,7 @@ const Home = () => {
             </span>
           </div>
           <br />
-          <div className="dark:text-black">
+          <div>
             Detail-oriented and analytical engineering professional with a
             strong foundation in construction project management and site
             supervision. Driven by a longstanding passion for coding since
