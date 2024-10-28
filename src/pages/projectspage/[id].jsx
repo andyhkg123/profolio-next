@@ -42,7 +42,7 @@ const Project = () => {
         {project.display_one && (
           <div className="flex justify-center items-center h-screen">
             <Image // Change <img> to <Image>
-              className="text-center"
+              className="text-center m-0"
               src={project.display_one}
               alt="Project Display"
               layout="responsive" // Optional: Adjust layout as needed
@@ -54,7 +54,7 @@ const Project = () => {
         {project.display_two && (
           <div className="flex justify-center items-center h-screen">
             <Image // Change <img> to <Image>
-              className="text-center"
+              className="text-center m-0"
               src={project.display_two}
               alt="Project Display"
               layout="responsive" // Optional: Adjust layout as needed
@@ -66,7 +66,7 @@ const Project = () => {
         {project.display_three && (
           <div className="flex justify-center items-center h-screen">
             <Image // Change <img> to <Image>
-              className="text-center"
+              className="text-center m-0"
               src={project.display_three}
               alt="Project Display"
               layout="responsive" // Optional: Adjust layout as needed
@@ -78,7 +78,7 @@ const Project = () => {
         {project.display_four && (
           <div className="flex justify-center items-center h-screen">
             <Image // Change <img> to <Image>
-              className="text-center"
+              className="text-center m-0"
               src={project.display_four}
               alt="Project Display"
               layout="responsive" // Optional: Adjust layout as needed
