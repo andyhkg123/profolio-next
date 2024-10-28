@@ -40,7 +40,7 @@ const Project = () => {
       <br />
       <div className="flex flex-wrap justify-center items-center">
         {project.display_one && (
-          <div className="flex justify-center items-center h-screen">
+          <div className="flex justify-center items-center ">
             <Image // Change <img> to <Image>
               className="text-center m-0"
               src={project.display_one}
@@ -52,7 +52,7 @@ const Project = () => {
           </div>
         )}
         {project.display_two && (
-          <div className="flex justify-center items-center h-screen">
+          <div className="flex justify-center items-center ">
             <Image // Change <img> to <Image>
               className="text-center m-0"
               src={project.display_two}
@@ -64,7 +64,7 @@ const Project = () => {
           </div>
         )}
         {project.display_three && (
-          <div className="flex justify-center items-center h-screen">
+          <div className="flex justify-center items-center ">
             <Image // Change <img> to <Image>
               className="text-center m-0"
               src={project.display_three}
@@ -76,7 +76,7 @@ const Project = () => {
           </div>
         )}
         {project.display_four && (
-          <div className="flex justify-center items-center h-screen">
+          <div className="flex justify-center items-center ">
             <Image // Change <img> to <Image>
               className="text-center m-0"
               src={project.display_four}
@@ -88,7 +88,7 @@ const Project = () => {
           </div>
         )}
         {project.video_link && (
-          <div className="flex justify-center items-center h-screen">
+          <div className="flex justify-center items-center ">
             <video src={project.video_link} width="720" height="680" controls />
           </div>
         )}
