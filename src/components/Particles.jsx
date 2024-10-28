@@ -419,6 +419,10 @@ const ParticlesComponent = (props) => {
           },
         },
         roll: {
+          darken: {
+            enable: false,
+            value: 0,
+          },
           enable: false,
           enlighten: {
             enable: false,
