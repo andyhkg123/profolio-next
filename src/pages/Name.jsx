@@ -20,7 +20,7 @@ const Home = () => {
             px-8
             py-24
             text-black
-            dark:text-gray-400
+            dark:text-black
             "
           >
             <FlipLink href="#">Andy</FlipLink>
