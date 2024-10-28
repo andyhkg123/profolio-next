@@ -38,9 +38,9 @@ const Project = () => {
         {project.desc}
       </p>
       <br />
-      <div className="flex flex-wrap justify-center items-center">
+      <div className="flex flex-wrap justify-center items-center ">
         {project.display_one && (
-          <div className="flex justify-center items-center ">
+          <div className="flex justify-center items-center m-4">
             <Image // Change <img> to <Image>
               className="text-center m-0"
               src={project.display_one}
@@ -52,7 +52,7 @@ const Project = () => {
           </div>
         )}
         {project.display_two && (
-          <div className="flex justify-center items-center ">
+          <div className="flex justify-center items-center m-4">
             <Image // Change <img> to <Image>
               className="text-center m-0"
               src={project.display_two}
@@ -64,7 +64,7 @@ const Project = () => {
           </div>
         )}
         {project.display_three && (
-          <div className="flex justify-center items-center ">
+          <div className="flex justify-center items-center m-4">
             <Image // Change <img> to <Image>
               className="text-center m-0"
               src={project.display_three}
@@ -76,7 +76,7 @@ const Project = () => {
           </div>
         )}
         {project.display_four && (
-          <div className="flex justify-center items-center ">
+          <div className="flex justify-center items-center m-4">
             <Image // Change <img> to <Image>
               className="text-center m-0"
               src={project.display_four}
@@ -88,15 +88,15 @@ const Project = () => {
           </div>
         )}
         {project.video_link && (
-          <div className="flex justify-center items-center ">
+          <div className="flex justify-center items-center m-4">
             <video src={project.video_link} width="720" height="680" controls />
           </div>
         )}
       </div>
       {project.git_link && (
-        <div className="flex justify-center">
+        <div className="flex justify-center m-100">
           <a
-            className="flex justify-center items-center bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded-full"
+            className="flex justify-center items-center bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded-full m-4"
             href={project.git_link}
           >
             Click this link to Github
