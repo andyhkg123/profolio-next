@@ -20,7 +20,7 @@ const Home = () => {
             px-8
             py-24
             text-black
-            dark:text-cyan-900
+            dark:text-gray-400
           >
             <FlipLink href="#">Andy</FlipLink>
             <br />
@@ -29,7 +29,7 @@ const Home = () => {
 
           <br />
           <div>
-            <span className=" text-2xl typewriter bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text dark:text-cyan-900">
+            <span className=" text-2xl typewriter bg-gradient-to-r from-blue-600 via-green-500 to-indigo-400 inline-block text-transparent bg-clip-text">
               {/* Full Stack Developer */}
             </span>
           </div>
