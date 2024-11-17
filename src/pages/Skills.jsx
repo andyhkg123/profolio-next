@@ -10,6 +10,7 @@ import htmlIcon from "../assets/htmlIcon.svg";
 import cssIcon from "../assets/cssIcon.svg";
 import bootstrapIcon from "../assets/bootstrapIcon.svg";
 import Image from "next/image";
+import spring from "../assets/spring.svg";
 
 const Skills = () => {
   return (
@@ -36,6 +37,10 @@ const Skills = () => {
         <div className="m-3">
           <Image className="zoom m-3" src={JavaIcon}></Image>
           <div className="text-center">Java</div>
+        </div>
+        <div className="m-3">
+          <Image className="zoom m-3 mx-auto" src={spring}></Image>
+          <div className="text-center">Springboot(Web API)</div>
         </div>
         <div className="m-3">
           <Image className="zoom m-3" src={nodeJSIcon}></Image>
