@@ -39,12 +39,12 @@ const Home = () => {
             Detail-oriented and analytical engineering professional with a
             strong foundation in construction project management and site
             supervision. Driven by a longstanding passion for coding since
-            university, I have self-taught myself Python, Java, JavaScript,
-            React, MongoDB, MySQL, Bootstrap, Tailwind, HTML, and CSS. Currently
-            advancing my skills through a comprehensive front-end bootcamp
-            focused on React, Node.js, and MongoDB. Eager to leverage my diverse
-            technical expertise and problem-solving abilities in a developer
-            role.
+            university, I have self-taught myself Python,
+            Java,Springboot(building web API) JavaScript, React, MongoDB, MySQL,
+            Bootstrap, Tailwind, HTML, and CSS. Currently advancing my skills
+            through a comprehensive front-end bootcamp focused on React,
+            Node.js, and MongoDB. Eager to leverage my diverse technical
+            expertise and problem-solving abilities in a developer role.
           </div>
         </div>
         <br />
