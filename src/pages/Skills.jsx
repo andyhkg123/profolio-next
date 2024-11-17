@@ -11,6 +11,7 @@ import cssIcon from "../assets/cssIcon.svg";
 import bootstrapIcon from "../assets/bootstrapIcon.svg";
 import Image from "next/image";
 import spring from "../assets/spring.svg";
+import typescript from "../assets/typescript.svg";
 
 const Skills = () => {
   return (
@@ -33,6 +34,10 @@ const Skills = () => {
         <div className="m-3">
           <Image className="zoom m-3" src={JavascriptIcon}></Image>
           <div className="text-center">Javascript</div>
+        </div>
+        <div className="m-3">
+          <Image className="zoom m-3" src={typescript}></Image>
+          <div className="text-center">Typescript</div>
         </div>
         <div className="m-3">
           <Image className="zoom m-3" src={JavaIcon}></Image>

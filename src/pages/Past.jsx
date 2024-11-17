@@ -89,8 +89,8 @@ const Past = () => {
               </li>
               <li>
                 Developed responsive web applications using HTML, CSS,
-                JavaScript, React, and NodeJs, enhancing user experience and
-                interface design.
+                JavaScript,TypeScript, React, and NodeJs, enhancing user
+                experience and interface design.
               </li>
               <li>
                 Built single-page applications with React, ensuring efficient
